@@ -18,8 +18,13 @@ When you click the **Knit** button a document will be generated that includes bo
 ```{r}
 x <- list(a = 1:4, b = rnorm(10), c = rnorm(20,1), d = rnorm(100,5))
 lapply(x, mean)
-
 sapply(x,mean)
+
+
+x<- matrix(rnorm(200), 20, 10)
+apply(x,2,mean)
+
+apply(x,1,sum)
 ```
 
 
