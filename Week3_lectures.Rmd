@@ -26,10 +26,10 @@ apply(x,2,mean)
 
 apply(x,1,sum)
 # optimized
-rowsum() = apply(x,1,sum)
-rowMeans() = apply(x,1,mean)
-colSums() = apply(x,2,sum)
-colMeans() = apply(x,2,mean)
+# rowsum() = apply(x,1,sum)
+# rowMeans() = apply(x,1,mean)
+# colSums() = apply(x,2,sum)
+# colMeans() = apply(x,2,mean)
 ```
 
 
