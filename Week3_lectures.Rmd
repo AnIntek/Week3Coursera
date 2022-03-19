@@ -83,6 +83,38 @@ f2
 interaction(f1,f2)
 ```
 
+```{r}
+library(datasets)
+data(iris)
+# tapply(iris$Sepal.Length, iris$Species, mean) #6.58
 
+apply(iris[, 1:4], 2, mean)
+```
+
+```{r}
+library(datasets)
+data(mtcars)
+
+average_hp_by_cyl <- tapply(mtcars$hp, mtcars$cyl, mean)
+average_hp_by_cyl["8"]
+average_hp_by_cyl["4"]
+dif8_4cyl_hp1 <- (average_hp_by_cyl["8"]  - average_hp_by_cyl["4"])
+dif8_4cyl_hp <- (as.numeric(average_hp_by_cyl["8"])  - as.numeric(average_hp_by_cyl["4"]))
+dif8_4cyl_hp1 #126.5779 
+dif8_4cyl_hp #126.5779 
+
+```
+
+```{r}
+#calculate the average miles per gallon (mpg) by number of cylinders in the car (cyl)? Select all that apply.
+library(datasets)
+data(mtcars)
+
+tapply(mtcars$mpg, mtcars$cyl, mean)
+
+sapply(split(mtcars$mpg, mtcars$cyl), mean)
+
+with(mtcars, tapply(mpg, cyl, mean))
+```
 
 ## Including Plots
